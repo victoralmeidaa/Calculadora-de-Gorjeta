@@ -1,0 +1,1 @@
+Este projeto ensina a usar uma calculadora de gorjeta utilizando HTML, CSS e JAVASCRIPT.
