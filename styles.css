@@ -5,6 +5,7 @@
     --secondary-color: dimgrey;
     --tertiary-color: gainsboro;
 }
+
 body{
     background-color: var(--primary-color);
     font-size: 15px;
