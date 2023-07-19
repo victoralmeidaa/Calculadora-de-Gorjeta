@@ -1,27 +1,32 @@
-function calcularTip(event){
+function calcularTip(event) {
     event.preventDefault();
-    let valorConta = document.getElementById('bill').value; 
+    let valorConta = document.getElementById('bill').value;
     let qualidadeServ = document.getElementById('qualidadeService').value;
     let quantidadeP = document.getElementById('people').value;
 
-    if(bill == '' | qualidadeServ == 0){
+    // alerta para preencher o formulario 
+    if (bill == '' | qualidadeServ == 0) {
         alert("Por favor, preencha  os valores")
         return;
     }
 
-    if(quantidadeP == "" | quantidadeP <=1){
+    // Logica para exibir resultado 
+    if (quantidadeP == "" | quantidadeP <= 1) {
         quantidadeP = 1;
-            document.getElementById('each').style.display = "none"
+        // se quantidade pessoa for menor ou igual a 1 nao exibe div id=mais-uma-pessoa
+        document.getElementById('mais-uma-pessoa').style.display = "none"
     } else {
-        document.getElementById('each').style.display = "block"
+        document.getElementById('mais-uma-pessoa').style.display = "block"
     }
-        let total = (valorConta * qualidadeServ) / quantidadeP;
-        total = total.toFixed(2);
-        document.getElementById('tip').innerHTML = total;
-        document.getElementById('totalGorj').style.display = "block";
+    let total = (valorConta * qualidadeServ) / quantidadeP;
+    total = total.toFixed(2);
+    document.getElementById('valor-calculado').innerHTML = total;
+    document.getElementById('totalGorj').style.display = "block";
 }
 
-document.getElementById('totalGorj').style.display = "none"; 
-document.getElementById('each').style.display = "none";
+// Definir display div id=totalGorj como none
+document.getElementById('totalGorj').style.display = "none";
+// Definir display div id=mais-uma-pessoa como none
+document.getElementById('mais-uma-pessoa').style.display = "none";
 
- document.getElementById('formCalc').addEventListener('submit', calcularTip);
+document.getElementById('formCalc').addEventListener('submit', calcularTip);
