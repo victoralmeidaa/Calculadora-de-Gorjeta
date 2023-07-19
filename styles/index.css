@@ -1,9 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:300,400,700|PT++Mono);
 body {
-  background: lightcoral;
+  background: linear-gradient(90deg, #38bdf8, #6d28d9, #4c1d95);
   font-size: 17px;
   font-family: Lato;
   color: rgb(0, 0, 0);
+  height: 100%;
 }
 
 #conteiner {
@@ -15,8 +16,8 @@ body {
   border-radius: 20px;
 }
 #conteiner .title {
-  background: dimgrey;
-  color: gainsboro;
+  background: #6d28d9;
+  color: cornsilk;
   padding: 20px;
   text-transform: uppercase;
   font-size: 18px;
@@ -31,15 +32,15 @@ body {
 }
 #conteiner .formInput {
   background: white;
-  width: 40px;
+  width: 95%;
   padding: 5px 5px 8px 8px;
 }
 #conteiner .formInput:focus {
-  border: 3px solid lightcoral;
+  border: 3px solid #38bdf8;
   outline: none;
 }
 #conteiner .formSelect {
-  width: 180px;
+  width: 100%;
   padding: 5px;
   font-size: 12px;
 }
@@ -48,7 +49,7 @@ body {
   font-weight: bold;
   display: block;
   margin: 30px auto;
-  background: lightcoral;
+  background: linear-gradient(90deg, #38bdf8, #6d28d9, #4c1d95);
   border-radius: 5px;
   width: 200px;
   height: 50px;
