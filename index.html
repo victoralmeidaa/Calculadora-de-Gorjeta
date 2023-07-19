@@ -1,53 +1,59 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./styles/index.css">
     <title>Calculadora de Gorjeta</title>
 
 </head>
+
 <body>
     <div id="conteiner">
-    <div>
-        <h1 class="title">Calculadora de Gorjeta</h1> 
-    </div>
-    <div>
-        <form class="formCalc" id="formCalc">
-            <label for="bill">
-                <p>Quanto ficou a conta?</p>
-            </label>
-            <p>
-                R$ <input type="number" placeholder="100" name="bill" id="bill" class="formInput" required>
-            </p>
-            <label for="qualidadeService">
-                <p>Como foi o serviço</p>
-            </label>
-            <p>
-                <select name="qualidadeService" id="qualidadeService" class="formSelect" required>
-                    <option disabled selected value="0">-- Escolha uma opção</option>
-                    <option value="0.3">30% - Muito Bom</option>
-                    <option value="0.2">20% - Bom</option>
-                    <option value="0.15">15% - Aceitável</option>
-                    <option value="0.1">10% - Ruim</option>
-                    <option value="0.05">5% - Péssimo</option>
-                </select>
-            </p>
-            <label>
+        <div>
+            <h1 class="title">Calculadora de Gorjeta</h1>
+        </div>
+        <div>
+            <form class="formCalc" id="formCalc">
+                <label for="bill">
+                    <p>Quanto ficou a conta?</p>
+                </label>
                 <p>
-                    <input type="number" placeholder="1" name="people" id="people" class="formInput" required> Pessoa(s)
+                    R$ <input type="number" placeholder="100" name="bill" id="bill" class="formInput" required>
                 </p>
-                <button type="submit" class="formSubmit">Calcular!</button>
-            </label>
-        </form>
-    </div>
-    <div id="totalGorj">
-        Gorjeta Total:
-        R$<span id="tip">0.00</span>
-        <p id="each">cada</p>
-    </div>
+                <label for="qualidadeService">
+                    <p>Como foi o serviço</p>
+                </label>
+                <p>
+                    <select name="qualidadeService" id="qualidadeService" class="formSelect" required>
+                        <option disabled selected value="0">-- Escolha uma opção</option>
+                        <option value="0.3">30% - Muito Bom</option>
+                        <option value="0.2">20% - Bom</option>
+                        <option value="0.15">15% - Aceitável</option>
+                        <option value="0.1">10% - Ruim</option>
+                        <option value="0.05">5% - Péssimo</option>
+                    </select>
+                </p>
+                <label>
+                    <p>
+                        <input type="number" placeholder="1" name="people" id="people" class="formInput" required>
+                        Pessoa(s)
+                    </p>
+                    <button type="submit" class="formSubmit">Calcular!</button>
+                </label>
+            </form>
+        </div>
+
+        <!--Resultado Exibido-->
+        <div id="totalGorj">
+            Gorjeta Total:
+            R$<span id="valor-calculado">0.00</span>
+            <p id="mais-uma-pessoa">cada</p>
+        </div>
     </div>
     <script type="text/javascript" src="scripts.js"></script>
 </body>
+
 </html>
